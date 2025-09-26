@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import MatrixBackground from './MatrixBackground';
 
 const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 const API = `${API_BASE}/api`;
@@ -236,8 +237,9 @@ Ordered: ${new Date(orderStatus.timestamp).toLocaleString()}
   };
 
   return (
-    <div className="min-h-screen bg-black text-green-400 font-mono p-2 sm:p-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-black text-green-400 font-mono p-2 sm:p-4 relative">
+      <MatrixBackground />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div
           ref={terminalRef}
           className="min-h-[calc(100vh-6rem)] sm:min-h-[calc(100vh-8rem)] mb-2 sm:mb-4 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-green-600"
