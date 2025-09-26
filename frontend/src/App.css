@@ -32,3 +32,44 @@
         transform: rotate(360deg);
     }
 }
+
+/* Terminal animations */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+    animation: blink 1s infinite;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin {
+    scrollbar-width: thin;
+}
+
+.scrollbar-track-gray-800 {
+    scrollbar-color: #1f2937 transparent;
+}
+
+.scrollbar-thumb-green-600 {
+    scrollbar-color: #16a34a #1f2937;
+}
+
+/* Webkit scrollbar for better browser support */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollbar-track-gray-800::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+.scrollbar-thumb-green-600::-webkit-scrollbar-thumb {
+    background: #16a34a;
+    border-radius: 4px;
+}
+
+.scrollbar-thumb-green-600::-webkit-scrollbar-thumb:hover {
+    background: #22c55e;
+}
